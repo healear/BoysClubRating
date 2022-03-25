@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="ru" "xmlns ="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Boys club Raiting</title>
+	<meta http-equiv="Content-Type" charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="img/icon2.png" type="images/x-icon">
+</head>
+<body>
+<div class="wrapper">
+<div class="content">
+	<nav class="nav">
+		<div class="container">
+			<div class="nav_row">
+				<div class="nav_body">
+					<div class="logo">
+						<img class="log" src="img/Boys.png">
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#">О сайте</a>
+						<a href="#">Контакты</a>
+						<a href="#">+7 (914) 562-65-82</a>
+						<button class="nav_button"><a href="#"><img src="img/vector.svg"></a></button>
+						<a href="#" class="nav_last_a">Оставить заявку</a>
+					</div>
+					<div class="nav_down">
+						<a href="#"></a>
+						<a href="#">Главная</a>
+						<a href="#"></a>
+						<a href="#">Список фильмов</a>
+						<a href="#"></a>
+						<a href="#">Купить подписку</a>
+						<a href="#"></a>
+						<a href="#">Наш рейтинг</a>
+					
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+	<header class="header">
+		<div class="container">
+			<div class="header_row">
+				<div class="header_column">
+					<div class="header_item">
+						<div class="item_row">
+							<div class="item_body">
+								<h1>Выберите <br> интересующий фильм</h1>
+								<div class="filter">
+									<div class="filter_items"><span>Жанр фильма</span><img src="img/chevron_down.svg"></div>
+									<div class="filter_items"><span>Год выпуска</span><img src="img/chevron_down.svg"></div>
+									<div class="filter_items"><span>Страна</span><img src="img/chevron_down.svg"></div>
+									<button class="filter_items"><img src="img/search.svg">Найти</button>
+								</div>
+								<p class="reset_filter">Сбросить фильтр</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="container">
+			
+				<div class="main_body">
+					<h2>База данных фильмов</h2>
+
+					<!--this form data is needed to add data to the table below-->
+					<form>
+						<h3>Введите название фильма:</h3>
+						<p><input id = "name_input" maxlength="50" size="40" ></p>
+					</form>
+
+					<form>
+						<h3>Введите год:</h3>
+						<p><input id = "year_input" maxlength="4" size="7" ></p>
+					</form>
+
+					<form>
+						<h3>Введите страну:</h3>
+						<p><input id = "country_input" maxlength="50" size="20" ></p>
+					</form>
+
+					<form>
+						<h3>Введите жанр:</h3>
+						<p><input id = "genre_input" maxlength="50" size="20" ></p>
+					</form>
+
+					<form>
+						<h3>Введите актеров:</h3>
+						<p><textarea id = "actors_input" cols="60" rows="8" ></textarea></p>
+					</form>
+					   
+					<form>
+						<h3>Введите награды:</h3>
+						<p><textarea id = "awards_input" cols="60" rows="8" ></textarea></p>
+					   </form>
+					   <p><button id="Submit_form">Отправить</button> 
+					   &nbsp;
+
+				</div>
+
+				<div class="styletable">
+
+					<!--this is a table for viewing, editing and deleting data-->
+					<table class="Films_Table">
+						<tbody>
+							<tr>
+								<th>Название фильма</th>
+
+								<th>Год</th>
+
+								<th>Страна</th>
+
+								<th>Жанр</th>
+
+								<th>Актёры</th>
+
+								<th>Рейтинг</th>
+
+								<th>Награды</th>
+
+								<th></th>
+
+								<th></th>
+
+								<th></th>
+							</tr>
+
+
+
+
+
+						</tbody>
+						<tfoot class="Films_Table--d">
+							
+							
+						</tfoot>
+					</table>
+					&nbsp;
+				</div>	
+		</div>
+	</main>
+</div>
+</div>
+
+
+<!--Вспылвающее окно-->
+<div class="zatemnenie zatemnenie--passive">
+	<div id="okno">
+	  <br>Добавление рейтинга<br>
+	<form>
+		<h3>Введите имя:</h3>
+		<p><input id = "rating_name" value = "" maxlength="25" size="20" ></p>
+	</form>
+	<form>
+		<h3>Введите пароль:</h3>
+		<p><input id = "rating_pass" value = "" maxlength="30" size="20" ></p>
+	</form>
+	<form>
+		<h3>Введите рейтинг фильма:</h3>
+		<p><select id = "rating_value" value = "">
+			<option value='0'>0</option>
+			<option value='1'>1</option>
+			<option value='2'>2</option>
+			<option value='3'>3</option>
+			<option value='4'>4</option>
+			<option value='5'>5</option>
+			<option value='6'>6</option>
+			<option value='7'>7</option>
+			<option value='8'>8</option>
+			<option value='9'>9</option>
+			<option value='10'>10</option>
+			</select></p>
+	</form>
+	  <button id="SendRating" data-value="">Отправить</button>
+	</div>
+	
+</div>
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="js/n3.js" charset="windows-1251"></script>
+</body>
+</html>
