@@ -71,7 +71,7 @@ function ReadFilms() {
                 Block += "<th style='text-align: center'> <button class='Update_film' data-value ='"+filmAr[i].id+"'>Изменить</button></td>";
 				Block += "<th style='text-align: center'><button class = 'Delete_film' data-value ='"+filmAr[i].id+"'>Удалить</button></td>";			
 				Block += "<th> <p style='text-align: center'><button class='Add_rating' data-value ='"+filmAr[i].id+"'>Добавить рейтинг</button></th>";			
-							
+
 							
                 Block += "</tr>";
                 $(".Films_Table--d").append(Block);
