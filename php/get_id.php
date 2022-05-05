@@ -1,4 +1,5 @@
 <?php
+
 	header('Content-Type: text/html; charset=utf-8');
 
 	$host = 'localhost'; // адрес сервера 
@@ -13,7 +14,7 @@
 
 	switch ($_GET['Action']) 
 	{
-		case "Get_Id":
+		case "GetId":
 		{
 			$Name = $_GET['Name'];
 			$Pas = $_GET['Pas'];

@@ -11,7 +11,7 @@ function ReadFilms() {
         this.actors = actors;
         this.awards = awards;
 	}
-    
+
     addActor(_actor){
     this.actors+=", "+_actor;
 	}
@@ -21,27 +21,27 @@ function ReadFilms() {
      this.awards+=", "+_award;
 	}
 	}
-    
+
     $.ajax({
         type: "GET",
         dataType: "text",
         url: "php/controller.php",
         data: {},
         success: function (data) {
-            
+
             var Tresult = JSON.parse(data);
             console.log(Tresult);
             var MovieId = Tresult[0].Id;
             var filmAr = [];
-         
+
             var newFilm = new Film(Tresult[0].Id, Tresult[0].Name,Tresult[0].Year, Tresult[0].Country, Tresult[0].Genre, Tresult[0].Rating, Tresult[0].Actor, Tresult[0].Award);
             for (var i = 1; i<Tresult.length; i++)
-            { 
-                if (MovieId != Tresult[i].Id)
+            {
+                if (MovieId !== Tresult[i].Id)
                 {
                     MovieId = Tresult[i].Id;
-                    filmAr.push(newFilm);             
-                    newFilm = new Film(Tresult[i].Id, Tresult[i].Name,Tresult[i].Year, Tresult[i].Country, Tresult[i].Genre, Tresult[i].Rating, Tresult[i].Actor, Tresult[i].Award);    
+                    filmAr.push(newFilm);
+                    newFilm = new Film(Tresult[i].Id, Tresult[i].Name,Tresult[i].Year, Tresult[i].Country, Tresult[i].Genre, Tresult[i].Rating, Tresult[i].Actor, Tresult[i].Award);
 				}
                 else
                 {
@@ -51,7 +51,7 @@ function ReadFilms() {
                     if (!newFilm.awards.includes(Tresult[i].Award)){
                     newFilm.addAward(Tresult[i].Award);
                     }
-                    
+
 				}
 			}
         filmAr.push(newFilm);
@@ -69,10 +69,10 @@ function ReadFilms() {
                 Block += "<th><input class = '_orating"+filmAr[i].id+"' maxlength='2' size='5'  value = '"+filmAr[i].rating+"'></td>";
                 Block += "<th><input class = '_oawards"+filmAr[i].id+"' maxlength='500' size='40' value = '"+filmAr[i].awards+"'></td>";
                 Block += "<th style='text-align: center'> <button class='Update_film' data-value ='"+filmAr[i].id+"'>Изменить</button></td>";
-				Block += "<th style='text-align: center'><button class = 'Delete_film' data-value ='"+filmAr[i].id+"'>Удалить</button></td>";			
-				Block += "<th> <p style='text-align: center'><button class='Add_rating' data-value ='"+filmAr[i].id+"'>Добавить рейтинг</button></th>";			
+				Block += "<th style='text-align: center'><button class = 'Delete_film' data-value ='"+filmAr[i].id+"'>Удалить</button></td>";
+				Block += "<th> <p style='text-align: center'><button class='Add_rating' data-value ='"+filmAr[i].id+"'>Добавить рейтинг</button></th>";
 
-							
+
                 Block += "</tr>";
                 $(".Films_Table--d").append(Block);
 
@@ -82,7 +82,7 @@ function ReadFilms() {
 }
 
 $(document).ready(function () {
-    
+
     ReadFilms();
 });
 
@@ -128,7 +128,7 @@ $("body").on("click", ".Add_rating", function()
 {
     $("#SendRating").data("value",$(this).data("value"));
     $(".zatemnenie--passive").toggleClass("active");
-    
+
 });
 
 $("#SendRating").on("click", function()
@@ -141,14 +141,14 @@ $("#SendRating").on("click", function()
     $.ajax({
         type:"GET",
         dataType:"text",
-        url:"php/GetId.php",
+        url:"php/get_id.php",
         data:{
-          "Action":"Get_Id",
+          "Action":"GetId",
           "Name":name,
           "Pas":pas
 		},
         success: function(data){
-            Uid = JSON.parse(data);
+            uid = JSON.parse(data);
             console.log(Uid.Id);
             $.ajax({
                 type:"POST",
@@ -156,7 +156,7 @@ $("#SendRating").on("click", function()
                 url:"php/add_rating.php",
                 data: {
                     "Action":"Update",
-                    "UId":Uid.Id,
+                    "UId":uid.Id,
                     "Id":index,
                     "Rating":rating
 				},
@@ -166,7 +166,7 @@ $("#SendRating").on("click", function()
 				}
             });
 		}
-    });   
+    });
 });
 
 $("body").on("click",".Update_film", function(){
@@ -184,7 +184,7 @@ $("body").on("click",".Update_film", function(){
     $.ajax({
         type:"GET",
         dataType:"text",
-        url:"php/GetAct.php",
+        url:"php/get_act.php",
         data:{
             "Action":"GetAct",
             "FilmId":id,
@@ -208,7 +208,7 @@ $("body").on("click",".Update_film", function(){
                   "FilmId":id
 			},
             success:function(data){
-            
+
 			}
 
             });
@@ -225,7 +225,7 @@ $("body").on("click",".Update_film", function(){
             "Awards":awardAr
 		},
         success:function(data){
-        
+
 		}
     });
     $.ajax({
@@ -255,7 +255,7 @@ $("body").on("click",".Delete_film", function(){
         url:"php/delete_film.php",
         data:{
             "Action":"Delete",
-            "FilmId":id            
+            "FilmId":id
         },
         success:function(data){
             console.log(data);
