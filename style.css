@@ -225,7 +225,7 @@ button.nav_button a{margin-right: 0;}
 	background-color: #2C87F2;
 	border-radius: 5px;
 }
-.filter_items{
+.filter_films{
 	display: flex;
 	margin: 25px;
 	padding: 25px;
@@ -233,27 +233,147 @@ button.nav_button a{margin-right: 0;}
 	border: 2px solid white;
 	transition: 0.2s ease;
 }
-.filter_items span{
+.filter_films span{
 	margin-right: 40px;
 	color: #3B3E44;
 	white-space: nowrap;
 }
-.filter_items:hover{
+.filter_films:hover{
 	border: 2px solid #2C87F2;
 	cursor: pointer;
 	transition: 0.5s ease;
 }
-button.filter_items{
+button.filter_films{
 	width: 233px;
 	height: 50px;
 	color: #fff;
 	font-size: 16px;
 	font-weight: bolder;
 }
-button.filter_items img, button.filter_items span{
+button.filter_films img, button.filter_films span{
 	margin-right: 10px;
 	margin-left: 40px;
 }
+.filter_genres{
+	display: flex;
+	margin: 25px;
+	padding: 25px;
+	align-items: center;
+	border: 2px solid white;
+	transition: 0.2s ease;
+}
+.filter_genres span{
+	margin-right: 40px;
+	color: #3B3E44;
+	white-space: nowrap;
+}
+.filter_genres:hover{
+	border: 2px solid #2C87F2;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+button.filter_genres{
+	width: 233px;
+	height: 50px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bolder;
+}
+button.filter_genres img, button.filter_genres span{
+	margin-right: 10px;
+	margin-left: 40px;
+}
+
+.filter_years{
+	display: flex;
+	margin: 25px;
+	padding: 25px;
+	align-items: center;
+	border: 2px solid white;
+	transition: 0.2s ease;
+}
+.filter_years span{
+	margin-right: 40px;
+	color: #3B3E44;
+	white-space: nowrap;
+}
+.filter_years:hover{
+	border: 2px solid #2C87F2;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+button.filter_years{
+	width: 233px;
+	height: 50px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bolder;
+}
+button.filter_years img, button.filter_years span{
+	margin-right: 10px;
+	margin-left: 40px;
+}
+
+.filter_countries{
+	display: flex;
+	margin: 25px;
+	padding: 25px;
+	align-items: center;
+	border: 2px solid white;
+	transition: 0.2s ease;
+}
+.filter_countries span{
+	margin-right: 40px;
+	color: #3B3E44;
+	white-space: nowrap;
+}
+.filter_countries:hover{
+	border: 2px solid #2C87F2;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+button.filter_countries{
+	width: 233px;
+	height: 50px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bolder;
+}
+button.filter_countries img, button.filter_countries span{
+	margin-right: 10px;
+	margin-left: 40px;
+}
+
+.filter_search{
+	display: flex;
+	margin: 25px;
+	padding: 25px;
+	align-items: center;
+	border: 2px solid white;
+	transition: 0.2s ease;
+}
+.filter_search span{
+	margin-right: 40px;
+	color: #3B3E44;
+	white-space: nowrap;
+}
+.filter_search:hover{
+	border: 2px solid #2C87F2;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+button.filter_search{
+	width: 233px;
+	height: 50px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bolder;
+}
+button.filter_search img, button.filter_search span{
+	margin-right: 10px;
+	margin-left: 40px;
+}
+
 
 .main_row{display: flex;}
 .residential_complexes{
