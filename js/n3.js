@@ -119,7 +119,6 @@ $("#Submit_form").on("click", function () {
             $("#awards_input").val(null);
             console.log(data);
             ReadFilms();
-
         }
     });
 });
