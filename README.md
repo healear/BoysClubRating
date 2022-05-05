@@ -1,4 +1,4 @@
-﻿# BoysClubRating
+﻿# _BoysClubRating_
 
 <p align="center">
   <img name = "Makkonahi" src="img/Mak.jpg">

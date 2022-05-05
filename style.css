@@ -63,8 +63,13 @@ body{
 .container{
 	max-width: 1918px;
 	margin: 0 auto auto 100px;
+	border-bottom: 1px solid #E6E6E6;
 }
+.poisk{
+	max-width: 1918px;
+	margin: 0 auto auto 100px;
 
+}
 .styletable{
 	overflow-x: scroll;
 }
@@ -124,8 +129,10 @@ th, td {
 .logo .log{ margin-right: 32.5px; }
 .title{font-size: 30px;}
 .logo{
+	margin-left: 50%;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #E6E6E6;
+
+
 }
 .log+a img{
 	margin-left: 10px;
@@ -158,6 +165,7 @@ button.nav_button a{margin-right: 0;}
 .header {
 	padding: 50px 0px 20px 0px;
 	background: url("img/Mak.jpg") no-repeat;
+
 }
 .header_title {
 	text-align: center;
@@ -170,7 +178,7 @@ button.nav_button a{margin-right: 0;}
 }
 .item_row {
 	display: flex;
-	align-items: flex-center;
+	align-items: start;
 }
 .item_img {
 
@@ -181,13 +189,20 @@ button.nav_button a{margin-right: 0;}
 	padding-left: 25px;
 }
 .item_body h1{
-	font-size: 84px;
+	font-size: 80px;
+	margin-top: 15%;
+	margin-left: 1%;
 	color: white;
+	vertical-align: bottom
+}
+.h2{
+
+
 }
 .reset_filter{
 	color: white;
 	font-size: 16px;
-	margin-left: 1145px;
+	margin-left: 1160px;
 	transition: 0.4s ease;
 }
 .reset_filter:hover{
@@ -195,13 +210,16 @@ button.nav_button a{margin-right: 0;}
 	color: #2C87F2;
 }
 .filter{
-	height: 135px;
-	width: 1280px;
+	height: 120px;
+	width: 1380px;
+
+
 	background-color: white;
 	display: flex;
 	flex-direction: row;
-	align-items: flex-center;
+	align-items: center;
 	justify-content: space-around;
+
 }
 .filter button{
 	background-color: #2C87F2;
@@ -209,7 +227,7 @@ button.nav_button a{margin-right: 0;}
 }
 .filter_items{
 	display: flex;
-	margin: 40px;
+	margin: 25px;
 	padding: 25px;
 	align-items: center;
 	border: 2px solid white;
@@ -291,3 +309,62 @@ h2{
 	flex-wrap: wrap;
 	}
 }*/
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.regestration {
+
+Border-width: medium;
+margin-left: 5%;
+}
+
+/* Full-width input fields */
+label{
+	width: 50%;
+}
+input[type=text], input[type=password], input[type=password-repeat] {
+	width: 80%;
+	padding: 17px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+	background-color: #2C87F2;
+	color: white;
+	padding: 16px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 80%;
+	opacity: 0.9;
+}
+
+.registerbtn:hover {
+	opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+	color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+	background-color: #f1f1f1;
+	text-align: center;
+}

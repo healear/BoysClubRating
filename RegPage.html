@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--Hello, Maksim-->
+<html lang="ru">
+<head>
+    <title href="index.html">Boys club Raiting</title>
+    <meta http-equiv="Content-Type" charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="img/icon2.png" type="images/x-icon">
+</head>
+<div class="wrapper">
+    <div class="content">
+        <nav class="nav">
+            <div class="container">
+                <a href="index.html"><img src="img/Boys1.png"></a>
+                <div class="logo">
+                    <a href="PersonalPage.html">Личный кабинет</a>
+                    <a href="#">Войти</a>
+                    <button class="nav_button"><a href="#"></a></button>
+                    <a href="RegPage.html" class="nav_last_a">Регистрация</a>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</div>>
+<div class="regestration">
+    <h1>Зарегистрироваться</h1>
+    <p>Пожалуйста, заполните форму, чтобы создать учётную запись</p>
+    <hr>
+    <label for="login"><b></b></label>
+    <input type="text" id="login" placeholder="Введите логин" name="login" required>
+
+    <label for="psw"><b></b></label>
+    <input type="password" id="password" placeholder="Введите пароль" name="psw" required>
+
+    <label for="psw-repeat"><b></b></label>
+    <input type="password-repeat" id="password-repeat" placeholder="Повторите пароль" name="psw-repeat" required>
+    <hr>
+    <button type="submit" class="registerbtn">Зарегистрироваться</button>
+</div>
+
+<!--Вспылвающее окно-->
+<div class="zatemnenie zatemnenie--passive">
+    <div id="okno">
+        <br>Добавление рейтинга<br>
+        <form>
+            <h3>Введите имя:</h3>
+            <p><input id = "rating_name" value = "" maxlength="25" size="20" ></p>
+        </form>
+        <form>
+            <h3>Введите пароль:</h3>
+            <p><input id = "rating_pass" value = "" maxlength="30" size="20" ></p>
+        </form>
+        <form>
+            <h3>Введите рейтинг фильма:</h3>
+            <p><select id = "rating_value" value = "">
+                <option value='0'>0</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+            </select></p>
+        </form>
+        <button id="SendRating" data-value="">Отправить</button>
+    </div>
+
+</div>
+
+
+
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/n3.js" charset="windows-1251"></script>
+</html>
