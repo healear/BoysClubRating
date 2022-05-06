@@ -15,12 +15,11 @@
 		<div class="container">
 			<a href="index.html"><img src="img/Boys1.png"></a>
 					<div class="logo">
-						<a href="PersonalPage.html">Личный кабинет</a>
+						<a href="PersonalPage.html" class="personalpage">Личный кабинет</a>
 						<a href="#">Войти</a>
-						<button class="nav_button"><a href="#"></a></button>
-						<a href="RegPage.html" class="nav_last_a">Регистрация</a>
+						<a href="RegPage.html" class="nav_button">Регистрация</a>
+						<a href="#" class="nav_last_a">Выйти</a>
 					</div>
-
 		</div>
 	</nav>
 	<header class="header">
@@ -41,43 +40,39 @@
 
 	<main class="main">
 		<div class="container">
-			
 				<div class="main_body">
 					<h2>База данных фильмов</h2>
-
 					<!--this form data is needed to add data to the table below-->
-					<form>
-						<h3>Введите название фильма:</h3>
-						<p><input id = "name_input" maxlength="50" size="40" ></p>
-					</form>
+<form class="Input_Form">
+					<table class="Input_Table">
+						<thead>
+						<tr>
+							<th>Название фильма</th>
+							<th>Год</th>
+							<th>Страна</th>
+							<th>Жанр</th>
+							<th>Актёры</th>
+							<th>Награды</th>
 
-					<form>
-						<h3>Введите год:</h3>
-						<p><input id = "year_input" maxlength="4" size="7" ></p>
-					</form>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
 
-					<form>
-						<h3>Введите страну:</h3>
-						<p><input id = "country_input" maxlength="50" size="20" ></p>
-					</form>
+							<td><input id = "name input" maxlength="50" placeholder="Введите название фильма" size="24" ></td>
+							<td><input id = "year_input" maxlength="50" placeholder="Введите год" size="24" ></td>
+							<td><input id = "country_input" maxlength="50" placeholder="Введите страну" size="24" ></td>
+							<td><input id = "genre_input" maxlength="50" placeholder="Введите жанр" size="24" ></td>
+							<td><input id = "actors_input" maxlength="50" placeholder="Введите актеров" size="24" ></td>
+							<td><input id = "awards_input" maxlength="50" placeholder="Введите награды" size="24" ></td>
 
-					<form>
-						<h3>Введите жанр:</h3>
-						<p><input id = "genre_input" maxlength="50" size="20" ></p>
-					</form>
+						</tr>
 
-					<form>
-						<h3>Введите актеров:</h3>
-						<p><textarea id = "actors_input" cols="60" rows="8" ></textarea></p>
-					</form>
-					   
-					<form>
-						<h3>Введите награды:</h3>
-						<p><textarea id = "awards_input" cols="60" rows="8" ></textarea></p>
-					   </form>
-					   <p><button id="Submit_form">Отправить</button> 
+						</tbody>
+					</table>
+	<p><button id="Submit_form">Отправить</button>
+</form>
 					   &nbsp;
-
 				</div>
 
 				<div class="styletable">
@@ -120,36 +115,22 @@
 
 
 <!--Вспылвающее окно-->
+<!--Вспылвающее окно-->
 <div class="zatemnenie zatemnenie--passive">
-	<div id="okno">
-	  <br>Добавление рейтинга<br>
-	<form>
-		<h3>Введите имя:</h3>
-		<p><input id = "rating_name" value = "" maxlength="25" size="20" ></p>
-	</form>
-	<form>
-		<h3>Введите пароль:</h3>
-		<p><input id = "rating_pass" value = "" maxlength="30" size="20" ></p>
-	</form>
-	<form>
-		<h3>Введите рейтинг фильма:</h3>
-		<p><select id = "rating_value" value = "">
-			<option value='0'>0</option>
-			<option value='1'>1</option>
-			<option value='2'>2</option>
-			<option value='3'>3</option>
-			<option value='4'>4</option>
-			<option value='5'>5</option>
-			<option value='6'>6</option>
-			<option value='7'>7</option>
-			<option value='8'>8</option>
-			<option value='9'>9</option>
-			<option value='10'>10</option>
-			</select></p>
-	</form>
-	  <button id="SendRating" data-value="">Отправить</button>
+	<div id="oknoAut">
+		<br>Авторизироваться<br>
+		<form>
+			<h3>Введите логин:</h3>
+			<p><input id = "loginAut" value = "" maxlength="25" size="20" ></p>
+		</form>
+		<form>
+			<h3>Введите пароль:</h3>
+			<p><input id = "passwordAut" value = "" maxlength="30" size="20" ></p>
+		</form>
+		<form>
+		</form>
+		<button id="SendRating" data-value="">Отправить</button>
 	</div>
-	
 </div>
 	<script src="js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="js/n3.js" charset="windows-1251"></script>
