@@ -124,7 +124,7 @@ $("#Submit_form").on("click", function () {
     });
 });
 
-$("body").on("click", ".Add_rating", function()
+$("body").on("click", ".autbut", function()
 {
     $("#SendRating").data("value",$(this).data("value"));
     $(".zatemnenie--passive").toggleClass("active");
