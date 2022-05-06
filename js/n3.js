@@ -82,7 +82,6 @@ function ReadFilms() {
 }
 
 $(document).ready(function () {
-
     ReadFilms();
 });
 
@@ -125,13 +124,13 @@ $("#Submit_form").on("click", function () {
 
 $("body").on("click", ".Add_rating", function()
 {
-    $("#SendRating").data("value",$(this).data("value"));
+    $("#SendUser").data("value",$(this).data("value"));
     $(".zatemnenie--passive").toggleClass("active");
 
 });
 
 
-$("#SendRating").on("click", function()
+$("#SendUser").on("click", function()
 {
     var index = $(this).data("value");
     var name = $("#rating_name").val();
@@ -148,15 +147,14 @@ $("#SendRating").on("click", function()
           "Pas":pas
 		},
         success: function(data){
-            uid = JSON.parse(data);
-            console.log(Uid.Id);
+            uid = data;
             $.ajax({
                 type:"POST",
                 dataType:"text",
                 url:"php/add_rating.php",
                 data: {
                     "Action":"Update",
-                    "UId":uid.Id,
+                    "UId":uid,
                     "Id":index,
                     "Rating":rating
 				},
@@ -263,3 +261,5 @@ $("body").on("click",".Delete_film", function(){
         }
     });
 });
+
+
