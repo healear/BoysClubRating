@@ -124,12 +124,13 @@ $("#Submit_form").on("click", function () {
     });
 });
 
-$("body").on("click", ".autbut", function()
+$("body").on("click", ".Add_rating", function()
 {
     $("#SendRating").data("value",$(this).data("value"));
     $(".zatemnenie--passive").toggleClass("active");
 
 });
+
 
 $("#SendRating").on("click", function()
 {
