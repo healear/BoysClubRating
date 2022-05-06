@@ -78,7 +78,14 @@ body{
 }
 .container{
 	max-width: 1918px;
-	margin: 0 auto auto 100px;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-bottom: 1px solid #E6E6E6;
+}
+.top{
+	max-width: 1918px;
+	margin-left: 3%;
+
 	border-bottom: 1px solid #E6E6E6;
 }
 .poisk{
@@ -97,7 +104,6 @@ p{
 .Films_Table{
 	width: 100%;
 	margin-bottom: 18px;
-	padding: 0;
 	font-size: 13px;
 	border: 1px solid #141415;
 	border-spacing: 0;
@@ -109,6 +115,23 @@ p{
 	font-family: Helvetica, Arial;
 	font-size: 12px;
 	color: white;
+}
+
+.Personal_Table{
+	width: 100%;
+	margin-bottom: 18px;
+	font-size: 13px;
+	border: 1px solid #141415;
+	border-spacing: 0;
+	border-collapse: separate;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #37393c;
+	font-family: Helvetica, Arial;
+	font-size: 12px;
+	color: white;
+
 }
 
 .Input_Table {
@@ -514,6 +537,12 @@ Border-width: medium;
 margin-left: 5%;
 }
 
+.authorization{
+
+	Border-width: medium;
+	margin-left: 5%;
+}
+
 /* Full-width input fields */
 label{
 	width: 50%;
@@ -540,6 +569,17 @@ hr {
 
 /* Set a style for the submit/register button */
 .registerbtn {
+	background-color: #2C87F2;
+	color: white;
+	padding: 16px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 80%;
+	opacity: 0.9;
+}
+
+.autbut{
 	background-color: #2C87F2;
 	color: white;
 	padding: 16px 20px;

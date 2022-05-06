@@ -8,38 +8,73 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="img/icon2.png" type="images/x-icon">
 </head>
-<body>
 <div class="wrapper">
     <div class="content">
         <nav class="nav">
-            <div class="container">
+            <div class="top">
                 <a href="index.html"><img src="img/Boys1.png"></a>
                 <div class="logo">
                     <a href="PersonalPage.html" class="personalpage">Личный кабинет</a>
-                    <a href="#" class="autbut">Войти</a>
+
                     <a href="RegPage.html" class="nav_button">Регистрация</a>
                     <a href="#" class="nav_last_a">Выйти</a>
                 </div>
 
             </div>
         </nav>
-        <header class="header">
-            <div class="item_body">
-                <div class="poisk">
-                    <h1> Выберите интересующий фильм</h1>
-                    <div class="filter" >
-                        <div class="filter_films"><span>Название фильма</span><img src="img/chevron_down.svg"></div>
-                        <div class="filter_genres"><span>Жанр фильма</span><img src="img/chevron_down.svg"></div>
-                        <div class="filter_years"><span>Год выпуска</span><img src="img/chevron_down.svg"></div>
-                        <div class="filter_countries"><span>Страна</span><img src="img/chevron_down.svg"></div>
-                        <button class="filter_search"><img src="img/search.svg">Найти</button>
-                    </div>
-                    <p class="reset_filter">Сбросить фильтр</p>
-                </div>
-            </div>
-        </header>
     </div>
+</div>>
+<div class="authorization">
+    <h1>Авторизироваться</h1>
+    <p>Пожалуйста, заполните форму, чтобы увидеть список фильмов, к которым вы выставили рейтинг</p>
+    <form>
+        <label for="login"><b></b></label>
+        <input type="text" id="login" placeholder="Введите логин" name="login" required>
+
+        <label for="psw"><b></b></label>
+        <input type="password" id="password" placeholder="Введите пароль" name="psw" required>
+
+
+        <button type="submit" class="registerbtn">Авторизироваться</button>
+    </form>
 </div>
+<h1></h1>
+<h1></h1>
+<div class="container">
+    <table class="Personal_Table">
+        <tbody>
+        <tr>
+            <th>Название фильма</th>
+
+            <th>Год</th>
+
+            <th>Страна</th>
+
+            <th>Жанр</th>
+
+            <th>Актёры</th>
+
+            <th>Рейтинг</th>
+
+            <th>Награды</th>
+
+            <th></th>
+
+            <th></th>
+
+            <th></th>
+        </tr>
+        </tbody>
+
+        <tfoot class="Films_Table--d">
+
+        </tfoot>
+    </table>
+    &nbsp;
+</div>
+
+
+
 <div class="zatemnenie zatemnenie--passive">
     <div id="oknoRait">
         <br>Добавление рейтинга<br>
@@ -68,9 +103,8 @@
             </select></p>
         </form>
         <button id="SendRating" data-value="">Отправить</button>
-       <a href="PersonalPage.html"> <button id="exitbut" data-value="">Выход</button></a>
+        <a href="PersonalPage.html"> <button id="exitbut" data-value="">Выход</button></a>
     </div>
-
 </div>
 <script src="js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="js/n3.js" charset="windows-1251"></script>

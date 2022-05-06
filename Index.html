@@ -12,11 +12,11 @@
 <div class="wrapper">
 <div class="content">
 	<nav class="nav">
-		<div class="container">
+		<div class="top">
 			<a href="index.html"><img src="img/Boys1.png"></a>
 					<div class="logo">
 						<a href="PersonalPage.html" class="personalpage">Личный кабинет</a>
-						<a href="#" class="autbut">Войти</a>
+
 						<a href="RegPage.html" class="nav_button">Регистрация</a>
 						<a href="#" class="nav_last_a">Выйти</a>
 					</div>
@@ -38,12 +38,13 @@
 			</div>
 	</header>
 
+
 	<main class="main">
 		<div class="container">
-				<div class="main_body">
 					<h2>База данных фильмов</h2>
-					<!--this form data is needed to add data to the table below-->
-<form class="Input_Form">
+
+
+					<form class="Input_Form">
 					<table class="Input_Table">
 						<thead>
 						<tr>
@@ -53,30 +54,23 @@
 							<th>Жанр</th>
 							<th>Актёры</th>
 							<th>Награды</th>
-
 						</tr>
 						</thead>
 						<tbody>
 						<tr>
-
 							<td><input id = "name input" maxlength="50" placeholder="Введите название фильма" size="24" ></td>
 							<td><input id = "year_input" maxlength="50" placeholder="Введите год" size="24" ></td>
 							<td><input id = "country_input" maxlength="50" placeholder="Введите страну" size="24" ></td>
 							<td><input id = "genre_input" maxlength="50" placeholder="Введите жанр" size="24" ></td>
 							<td><input id = "actors_input" maxlength="50" placeholder="Введите актеров" size="24" ></td>
 							<td><input id = "awards_input" maxlength="50" placeholder="Введите награды" size="24" ></td>
-
 						</tr>
-
 						</tbody>
 					</table>
 	<p><button id="Submit_form">Отправить</button>
-</form>
+					</form>
 					   &nbsp;
-				</div>
 
-				<div class="styletable">
-					<!--this is a table for viewing, editing and deleting data-->
 					<table class="Films_Table">
 						<tbody>
 							<tr>
@@ -107,11 +101,9 @@
 						</tfoot>
 					</table>
 					&nbsp;
-				</div>	
 		</div>
 	</main>
-</div>
-</div>
+
 
 
 <!--Вспылвающее окно-->
